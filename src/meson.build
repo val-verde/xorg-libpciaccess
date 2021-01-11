@@ -22,6 +22,8 @@ host = host_machine.system()
 _pci_access_host_files = []
 if host == 'linux'
   _pci_access_host_files += ['linux_sysfs.c', 'linux_devmem.c', 'common_vgaarb.c']
+elif host == 'android'
+  _pci_access_host_files += ['linux_sysfs.c', 'linux_devmem.c', 'common_vgaarb.c']
 elif host == 'freebsd'
   _pci_access_host_files += ['freebsd_pci.c', 'common_vgaarb_stub.c']
 elif host == 'netbsd'
